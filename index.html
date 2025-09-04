@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Say Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1><u>Simon Says Game</u></h1>
+    <h3>Press any key to start the game.</h3>
+    <div class="btns">
+        <div class="line-1">
+            <div class="colors red" type="button" id="red"></div>
+            <div class="colors yellow" type="button" id="yellow"></div>
+        </div>
+        <div class="line-2">
+            <div class="colors green" type="button" id="green"></div>
+            <div class="colors purple" type="button" id="purple"></div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="guide" style="background-color: pink;">
+<hr>
+<button onclick="toggleInstructions()" style="height: 50px; width: 100px; border-radius: 20px; background-color: rgb(0, 255, 174);">How to Play</button>
+
+<div id="instructions" style="margin-top:5px;">
+  <!-- <h3> How to Play:</h3> -->
+  <ol>
+    <div class="li" style="display: inline-block; text-align: left;">
+    <h3><li>Press any key to begin.</li></h3>
+    <h3><li>Watch the sequence of colors.</li></h3>
+    <h3><li>Click the buttons in the same order.</li></h3>
+    <h3><li>Each round adds a new color.</li></h3>
+    <h3><li>One wrong click and the game restarts.</li></h3>
+    </div>
+  </ol>
+</div>
+
+<script>
+  function toggleInstructions() {
+    const instructions = document.getElementById("instructions");
+    instructions.style.display =
+      instructions.style.display === "none" ? "block" : "none";
+  }
+</script>
+</div>    
+
+    <script src="app.js"></script>
+</body>
+</html>
